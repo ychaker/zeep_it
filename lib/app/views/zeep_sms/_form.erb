@@ -1,0 +1,10 @@
+<% user_id ||= ' ' %>
+
+<div class="zeep-help">
+To receive text messages please make sure you have created a zeepmobile account below (widget may take a few seconds to load).  Ads may be inserted with your text messages, but you will not be spammed.
+</div>
+<iframe 
+  style="width: 100%; height: 300px; border: none;" 
+  id="zeep_mobile_settings_panel" 
+  src="https://secure.zeepmobile.com/subscription/settings?api_key=<%= ZeepSms::API_KEY %>&user_id=<%= user_id %>">
+</iframe>

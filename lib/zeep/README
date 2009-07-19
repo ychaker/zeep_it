@@ -1,0 +1,42 @@
+= Zeep Mobile Messaging - SMS Made Easy.
+
+With just a few lines of code, Zeep Mobile's API lets your web app communicate with your users over SMS. Zeep Mobile makes it easy to:
+
+    * Manage your users' mobile content subscriptions
+    * Send and receive SMS content 
+
+These libraries take care of the HTTP Header signing and posting to the HTTP endpoint.
+
+= Development
+
+http://code.google.com/p/zeep-messaging/ is the home of this project. For read-only access to the subversion repo; this should sort you out:
+
+$ svn checkout http://zeep-messaging.googlecode.com/svn/ruby/	trunk/ zeep-messaging-read-only  
+
+= Installing zeep-messaging
+
+Until we start publishing to rubyforge (coming soon) you'll have to get the latest gem from here:
+
+http://code.google.com/p/zeep-messaging/downloads/list
+
+Download it and then:
+
+$ gem install zeep-messaging-0.1.X.gem
+
+= Getting Started
+
+* Head to http://zeepmobile.com/ and get a developer account. 
+* Open your account page: https://secure.zeepmobile.com/account/
+* Register a new application.
+* Note your API_KEY and SECRET_KEY
+
+	require 'rubygems' # Only required if you've installed the gem version
+	require 'zeep/messaging'
+
+	Zeep::Base.configure_credentials(<your api key>, <your secret key>)
+	
+	Zeep::send_message(<user_id>, "'Art thou not Romeo, and a Montague?'")
+
+Wasn't that easy?
+
+As always, any and all feedback is appreciated. You can find me at simon@zeepmobile.com.

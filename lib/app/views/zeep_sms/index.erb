@@ -1,0 +1,6 @@
+<h3>Create your Zeep Mobile accound</h3>
+
+<!-- Example of displaying the Zeep Mobile form for registering a phone number -->
+<!-- A unique ID should be passed on to identify the user -->
+<% user_id = @user_id.nil? ? '' : @user_id %>
+<%= zeep_form(user_id) %>

@@ -1,0 +1,69 @@
+--- !ruby/object:Gem::Specification 
+name: zeep-messaging
+version: !ruby/object:Gem::Version 
+  version: 0.1.5
+platform: ruby
+authors: 
+- Zeep Mobile
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-08-23 00:00:00 -04:00
+default_executable: 
+dependencies: []
+
+description: A client library for Zeep Mobile's Messaging API.
+email: simon@zeepmobile.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+- CHANGELOG
+- LICENSE
+files: 
+- lib/zeep/auth.rb
+- lib/zeep/messaging.rb
+- lib/zeep/responses.rb
+- test/auth
+- test/messaging
+- CHANGELOG
+- LICENSE
+- README
+- Rakefile
+has_rdoc: true
+homepage: http://code.google.com/p/zeep-messaging/
+post_install_message: 
+rdoc_options: 
+- --quiet
+- --title
+- Zeep Mobile Messaging Cient
+- --main
+- README
+- --inline-source
+require_paths: 
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 2
+summary: A client library for Zeep Mobile's Messaging API.
+test_files: []
+
