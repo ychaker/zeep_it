@@ -12,6 +12,10 @@ A Zeep Mobile (http://zeepmobile.com) account and the respective API and SECRET 
 
 == Install
 
+Install from gihub:
+	gem sources -a http://gems.github.com (you only have to do this once)
+	sudo gem install ychaker-zeep_it
+	
 
 == Setup
 
@@ -55,5 +59,6 @@ Examples of parsing an SMS:
 Also returns the rest of the SMS omitting the 5-8 code in the beginning
 
 
+== Copyright
 
 Copyright (c) 2009 Youssef Chaker, released under the MIT license

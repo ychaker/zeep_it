@@ -1,4 +1,18 @@
+require 'rubygems'
+require 'rake'
+require 'rake/testtask'
+require 'rake/rdoctask'
+require 'rake/gempackagetask'
+
 # Gem::Specification for ZeepIt
+PKG_FILES = FileList[ 
+  '[a-zA-Z]*', 
+  'generators/**/*', 
+  'lib/**/*', 
+  'rails/**/*', 
+  'tasks/**/*', 
+  'test/**/*'
+]
 
 Gem::Specification.new do |s|
   s.name = "zeep_it"
