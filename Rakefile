@@ -2,6 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require 'rake/gempackagetask'
 
 desc 'Default: run unit tests.'
 task :default => :test
@@ -19,7 +20,7 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'ZeepIt'
   rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
+  rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
@@ -40,10 +41,11 @@ spec = Gem::Specification.new do |s|
   s.homepage = "http://github.com/ychaker/ZeepIt"
   s.platform = Gem::Platform::RUBY
   s.summary = "Get your app Zeep Mobile ready"
+  s.description = "Get your app Zeep Mobile ready"
   s.files = PKG_FILES.to_a
   s.require_path = "lib"
-  s.has_rdoc = false
-  s.extra_rdoc_files = ["README"]
+  s.has_rdoc = true
+  s.extra_rdoc_files = ["README.rdoc"]
 end
 
 desc 'Turn this plugin into a gem.'

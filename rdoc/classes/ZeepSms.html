@@ -157,7 +157,7 @@ Example:
           <div class="method-source-code" id="M000003-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/app/models/zeep_sms.rb, line 16</span>
-16:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">send_sms</span>(<span class="ruby-identifier">login</span>, <span class="ruby-identifier">body</span>) 
+16:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">send_sms</span>(<span class="ruby-identifier">login</span>, <span class="ruby-identifier">body</span>)
 17:     <span class="ruby-constant">Zeep</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">configure_credentials</span>(<span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">API_KEY</span>, <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">SECRET_KEY</span>)
 18:     <span class="ruby-constant">Zeep</span><span class="ruby-operator">::</span><span class="ruby-constant">Messaging</span>.<span class="ruby-identifier">send_message</span>(<span class="ruby-identifier">login</span>, <span class="ruby-identifier">body</span>)
 19:   <span class="ruby-keyword kw">end</span>
