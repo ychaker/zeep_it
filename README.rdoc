@@ -1,23 +1,19 @@
-ZeepIt
-======
+= ZeepIt
 
 ZeepIt is a plugin that leverages the zeep-messaging gem to create the models/controllers/views required to get your app ready to use the Zeep Mobile SMS service. 
 
 All you need to do is install the plugin, run the setup and sign up for an account at http://zeepmobile.com. Then make sure that your callback URL in your Zeep Mobile account point to http://www.yourdomain.com/zeep_sms/incoming and you add your api_key and you secret_key to config/zeep_it.yml and you'll be good to go.
 
 
-Prerequisites
-=============
+== Prerequisites
 
 A Zeep Mobile (http://zeepmobile.com) account and the respective API and SECRET keys.
 
 
-Install
-=======
+== Install
 
 
-Setup
-=====
+== Setup
 
 From your Rails App root directory run:
 	
@@ -28,8 +24,7 @@ From your Rails App root directory run:
 Then edit config/zeep_it.yml with the correct API and SECRET keys. 
 
 
-Examples
-========
+== Examples
 
 Example of using the helper method for displaying the Zeep Mobile:
 
