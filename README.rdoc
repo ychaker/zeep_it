@@ -13,9 +13,10 @@ A Zeep Mobile (http://zeepmobile.com) account and the respective API and SECRET 
 == Install
 
 Install from gihub:
-	gem sources -a http://gems.github.com (you only have to do this once)
+	gem sources -a http://gems.github.com
 	sudo gem install ychaker-zeep_it
 	
+you only have to update your gem sources once
 
 == Setup
 

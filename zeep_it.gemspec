@@ -16,7 +16,7 @@ PKG_FILES = FileList[
 
 Gem::Specification.new do |s|
   s.name = "zeep_it"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.author = "Youssef Chaker"
   s.email = "youssefchaker@youhhoo.com"
   s.homepage = "http://github.com/ychaker/ZeepIt"
