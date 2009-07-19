@@ -1,4 +1,4 @@
-class CreateZeepSms < ActiveRecord::Migration
+class CreateZeepSms < ActiveRecord::Migration #:nodoc:
   def self.up
     create_table :zeep_sms do |t|
       t.string   "raw"

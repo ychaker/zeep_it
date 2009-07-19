@@ -1,0 +1,63 @@
+ZeepIt
+======
+
+ZeepIt is a plugin that leverages the zeep-messaging gem to create the models/controllers/views required to get your app ready to use the Zeep Mobile SMS service. 
+
+All you need to do is install the plugin, run the setup and sign up for an account at http://zeepmobile.com. Then make sure that your callback URL in your Zeep Mobile account point to http://www.yourdomain.com/zeep_sms/incoming and you add your api_key and you secret_key to config/zeep_it.yml and you'll be good to go.
+
+
+Prerequisites
+=============
+
+A Zeep Mobile (http://zeepmobile.com) account and the respective API and SECRET keys.
+
+
+Install
+=======
+
+
+Setup
+=====
+
+From your Rails App root directory run:
+	
+	rake zeep_it:setup
+	
+(make sure your db is already created!)
+
+Then edit config/zeep_it.yml with the correct API and SECRET keys. 
+
+
+Examples
+========
+
+Example of using the helper method for displaying the Zeep Mobile:
+
+	<%= zeep_form(user_id) %>
+	
+Example of sending an SMSL
+
+	ZeepSms::send_sms('user_id', 'body of SMS')
+
+Example of creating a ZeepSms and sending it:
+
+	sms = ZeepSms.new(:login=> 'user_id', :raw =>'body of SMS')
+	sms.send_text
+
+Examples of parsing an SMS:
+
+  parse_for(:keyword => 'user:') 
+    #=> returns the text found after the keywork and before the next space
+  parse_for(:pattern => /[0-9]/) 
+    #=> returns the text found after the first digit and before the next space
+  parse_for(:common => 'twitter')
+    #=> returns the text found after the first '@' and before the next space
+  parse_for({:common => 'bang'}, true)
+    #=> returns the text found between the previous space and the next space
+    #=> removing the '!' in between
+
+	#=> Also returns the rest of the SMS omitting the 5-8 code in the beginning
+
+
+
+Copyright (c) 2009 Youssef Chaker, released under the MIT license

@@ -1,7 +1,7 @@
 class ZeepSmsController < ApplicationController
 
-  # GET /sms
-  # GET /sms.xml
+  # GET /zeep_sms
+  # GET /zeep_sms.xml
   def index
     respond_to do |format|
       format.html # index.html.erb

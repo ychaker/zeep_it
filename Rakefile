@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
@@ -36,7 +37,7 @@ spec = Gem::Specification.new do |s|
   s.version = "0.0.1"
   s.author = "Youssef Chaker"
   s.email = "youssefchaker@youhhoo.com"
-  s.homepage = "http://yafflers.example.com/"
+  s.homepage = "http://github.com/ychaker/ZeepIt"
   s.platform = Gem::Platform::RUBY
   s.summary = "Get your app Zeep Mobile ready"
   s.files = PKG_FILES.to_a

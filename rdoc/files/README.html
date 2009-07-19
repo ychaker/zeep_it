@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>README
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Sun Jul 19 15:47:58 -0400 2009</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+ZeepIt
+</p>
+<h6></h6>
+<p>
+ZeepIt is a plugin that leverages the zeep-messaging gem to create the
+models/controllers/views required to get your app ready to use the <a
+href="../classes/Zeep.html">Zeep</a> Mobile SMS service.
+</p>
+<p>
+All you need to do is install the plugin, run the setup and sign up for an
+account at <a href="http://zeepmobile.com">zeepmobile.com</a>. Then make
+sure that your callback URL in your <a href="../classes/Zeep.html">Zeep</a>
+Mobile account point to <a
+href="http://www.yourdomain.com/zeep_sms/incoming">www.yourdomain.com/zeep_sms/incoming</a>
+and you add your api_key and you secret_key to config/zeep_it.yml and
+you&#8216;ll be good to go.
+</p>
+<p>
+Prerequisites
+</p>
+<h6>=======</h6>
+<p>
+A <a href="../classes/Zeep.html">Zeep</a> Mobile (<a
+href="http://zeepmobile.com">zeepmobile.com</a>) account and the respective
+API and SECRET keys.
+</p>
+<p>
+Install
+</p>
+<h6>=</h6>
+<p>
+Setup
+</p>
+<h5></h5>
+<p>
+From your Rails App root directory run:
+</p>
+<pre>
+        rake zeep_it:setup
+</pre>
+<p>
+(make sure your db is already created!)
+</p>
+<p>
+Then edit config/zeep_it.yml with the correct API and SECRET keys.
+</p>
+<p>
+Examples
+</p>
+<h6>==</h6>
+<p>
+Example of using the helper method for displaying the <a
+href="../classes/Zeep.html">Zeep</a> Mobile:
+</p>
+<pre>
+        &lt;%= zeep_form(user_id) %&gt;
+</pre>
+<p>
+Example of sending an SMSL
+</p>
+<pre>
+        ZeepSms::send_sms('user_id', 'body of SMS')
+</pre>
+<p>
+Example of creating a <a href="../classes/ZeepSms.html">ZeepSms</a> and
+sending it:
+</p>
+<pre>
+        sms = ZeepSms.new(:login=&gt; 'user_id', :raw =&gt;'body of SMS')
+        sms.send_text
+</pre>
+<p>
+Examples of parsing an SMS:
+</p>
+<pre>
+  parse_for(:keyword =&gt; 'user:')
+    #=&gt; returns the text found after the keywork and before the next space
+  parse_for(:pattern =&gt; /[0-9]/)
+    #=&gt; returns the text found after the first digit and before the next space
+  parse_for(:common =&gt; 'twitter')
+    #=&gt; returns the text found after the first '@' and before the next space
+  parse_for({:common =&gt; 'bang'}, true)
+    #=&gt; returns the text found between the previous space and the next space
+    #=&gt; removing the '!' in between
+
+        #=&gt; Also returns the rest of the SMS omitting the 5-8 code in the beginning
+</pre>
+<p>
+Copyright (c) 2009 Youssef Chaker, released under the MIT license
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

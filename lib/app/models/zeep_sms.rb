@@ -3,7 +3,9 @@ require 'zeep/messaging'
 
 class ZeepSms < ActiveRecord::Base
   RAILS_ROOT ||= File.dirname(__FILE__) + '/../../../..'
-  file = YAML::load(IO.read("#{RAILS_ROOT}/config/zeep_it.yml")) 
+  file = YAML::load(IO.read("#{RAILS_ROOT}/config/zeep_it.yml"))
+  
+  # Zeep Mobile keys extracted from config/zeep_it.yml
   SECRET_KEY = file['SECRET_KEY']
   API_KEY = file['API_KEY']
   
@@ -53,11 +55,9 @@ class ZeepSms < ActiveRecord::Base
     rest.sub!(/[\w]+\s+{1}/, '').chomp!
     result = {:key => key, :rest => rest}
   end
-
-#:nodoc:  
-private 
-  #:nodoc:
-  def extract_keyword(hash={})
+  
+private
+  def extract_keyword(hash={}) #:nodoc:
     keyword = ''
     if !hash[:keyword].blank?
       keyword = hash[:keyword]
@@ -81,8 +81,7 @@ private
     keyword
   end
   
-  #:nodoc:
-  def parse_for(body, keyword, keepPrevious=false)
+  def parse_for(body, keyword, keepPrevious=false) #:nodoc:
     prev = /.*/
     if keepPrevious
       prev = ''

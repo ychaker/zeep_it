@@ -1,4 +1,6 @@
+#:nodoc:
 class ZeepItGenerator < Rails::Generator::NamedBase
+  #:nodoc:
   def manifest
     record do |m|
       # m.directory "lib"
