@@ -41,17 +41,18 @@ Example of creating a ZeepSms and sending it:
 
 Examples of parsing an SMS:
 
-  parse_for(:keyword => 'user:') 
-    #=> returns the text found after the keywork and before the next space
-  parse_for(:pattern => /[0-9]/) 
-    #=> returns the text found after the first digit and before the next space
-  parse_for(:common => 'twitter')
-    #=> returns the text found after the first '@' and before the next space
-  parse_for({:common => 'bang'}, true)
-    #=> returns the text found between the previous space and the next space
-    #=> removing the '!' in between
+	sms = ZeepSms.new(:login=> 'user_id', :raw =>'body of SMS')
+	sms.parse_for(:keyword => 'user:') 
+		#=> returns the text found after the keywork and before the next space
+	sms.parse_for(:pattern => /[0-9]/) 
+		#=> returns the text found after the first digit and before the next space
+	sms.parse_for(:common => 'twitter')
+		#=> returns the text found after the first '@' and before the next space
+	sms.parse_for({:common => 'bang'}, true)
+		#=> returns the text found between the previous space and the next space
+		#=> removing the '!' in between
 
-	#=> Also returns the rest of the SMS omitting the 5-8 code in the beginning
+Also returns the rest of the SMS omitting the 5-8 code in the beginning
 
 
 
