@@ -2429,3 +2429,17 @@
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
   [4;36;1mZeepSms Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `zeep_sms`[0m
   [4;35;1mZeeptItTest::Zeep Load (0.3ms)[0m   [0mSELECT * FROM `zeeps` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (71.4ms)[0m   [0;1mDROP TABLE `zeep_sms`[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mCREATE TABLE `zeep_sms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime, `raw` varchar(255), `login` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mDROP TABLE `zeep_sms`[0m
+  [4;35;1mSQL (27.5ms)[0m   [0mCREATE TABLE `zeep_sms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime, `raw` varchar(255), `login` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mZeepSms Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `zeep_sms`[0m
+  [4;35;1mZeeptItTest::Zeep Load (0.2ms)[0m   [0mSELECT * FROM `zeeps` [0m
