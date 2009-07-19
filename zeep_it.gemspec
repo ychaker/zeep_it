@@ -16,10 +16,10 @@ PKG_FILES = FileList[
 
 Gem::Specification.new do |s|
   s.name = "zeep_it"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.author = "Youssef Chaker"
   s.email = "youssefchaker@youhhoo.com"
-  s.homepage = "http://github.com/ychaker/ZeepIt"
+  s.homepage = "http://github.com/ychaker/zeep_it"
   s.platform = Gem::Platform::RUBY
   s.summary = "Get your app Zeep Mobile ready"
   s.description = "Get your app Zeep Mobile ready"
