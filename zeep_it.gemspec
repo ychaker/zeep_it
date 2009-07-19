@@ -41,7 +41,8 @@ Gem::Specification.new do |s|
     "test/test_helper.rb",
     "test/zeep_sms_controller_test.rb",
     "test/zeep_sms_helper_test.rb",
-    "test/zeep_sms_test.rb"
+    "test/zeep_sms_test.rb",
+    "pkg/zeep_it-0.0.4.gem"
   ]
   s.require_path = "lib"
   s.has_rdoc = true
